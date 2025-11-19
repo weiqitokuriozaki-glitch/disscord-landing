@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG型自習室 - Discord Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0f0f1a; /* より深い没入感のある背景 */
+            color: #e0e0e0;
+            background-image: radial-gradient(circle at 50% 0%, #2a1b3d 0%, #0f0f1a 60%);
+        }
+        .discord-button {
+            background-color: #5865F2; /* Discord Blurple */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .discord-button:hover {
+            background-color: #4752C4;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(88, 101, 242, 0.4);
+        }
+        .feature-card {
+            background-color: rgba(30, 30, 46, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #8a2be2;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.2);
+        }
+        .highlight-text {
+            background: linear-gradient(135deg, #a074e2 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <header class="relative pt-24 pb-20 px-4 text-center overflow-hidden">
+        <div class="container mx-auto relative z-10">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full bg-[#2a1b3d] border border-[#8a2be2]/30 text-[#a074e2] text-sm font-bold tracking-wider animate-pulse">
+                ✨ 新機能：ポモドーロタイマー＆称号システム実装
+            </div>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
+                勉強が<span class="highlight-text">ゲーム</span>になる<br>
+                最高の自習室。
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                「RPG型自習室」へようこそ。<br>
+                自動計測、レベルアップ、称号獲得。<br>
+                一人では続かない学習も、ここなら仲間と競い合いながら継続できます。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://discord.gg/JjpmQ7733F" target="_blank" class="inline-flex items-center justify-center py-4 px-8 rounded-full font-bold text-lg text-white discord-button group">
+                    <svg class="w-6 h-6 mr-3 fill-current" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.11,77.11,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22c1.24-18.87-2.6-38.47-18.9-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                    今すぐ参加してレベル上げ！
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 flex-grow">
+
+        <!-- Features Grid -->
+        <section id="features" class="mb-32">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                <span class="border-b-4 border-[#8a2be2] pb-2">モチベーションを加速させる機能</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">自動計測 & XP獲得</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        VCに入室するだけで勉強時間を自動記録。5分ごとに経験値(XP)が貯まり、あなたの努力が可視化されます。
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">レベルアップシステム</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        XPが貯まるとレベルアップ！サーバー内で自動的にレベルロールが付与され、周囲に実力を証明できます。
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        🔥
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">継続ストリーク</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        毎日の学習で「ストリーク」を伸ばそう。「継続の鬼」などの称号を目指して、毎日の習慣形成をサポート。
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        🍅
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">ポモドーロタイマー</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        「25分集中＋5分休憩」のサイクルをボットが管理。メリハリのある学習で、集中力を最大化します。
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        🏅
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">称号コレクション</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        「朝活勢」「深夜の住人」「努力家」など、あなたの学習スタイルに合わせて特別な称号ロールをゲット！
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4 bg-[#2a1b3d] w-16 h-16 flex items-center justify-center rounded-xl text-[#a074e2]">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">目標＆タスク管理</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        今週の目標を宣言したり、細かいタスクを登録・完了報告可能。達成するとボーナスXPがもらえます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section class="text-center py-20 px-4 bg-[#151520] rounded-3xl mb-20 border border-[#8a2be2]/20 shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                さあ、冒険（学習）を始めよう。
+            </h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+                孤独な勉強はもう終わり。レベルを上げ、称号を集め、仲間と共に成長する新しい学習体験がここにあります。
+            </p>
+            <a href="https://discord.gg/JjpmQ7733F" target="_blank" class="inline-block py-4 px-12 rounded-full font-bold text-lg text-white discord-button shadow-lg shadow-[#5865F2]/30">
+                サーバーに参加する
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0a12] border-t border-gray-800 text-center py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-500 text-sm">&copy; 2025 RPG型自習室 Discord Server. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
